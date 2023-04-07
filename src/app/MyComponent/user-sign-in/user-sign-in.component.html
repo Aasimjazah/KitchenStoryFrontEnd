@@ -1,0 +1,33 @@
+<!-- Login Form start -->
+<div  class="loginDiv">
+    <h2>User Registration</h2>
+    <hr>
+    <div style="display: inline-block;">
+      <form (ngSubmit)="userSignIn()">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example1">Email address</label>
+          <input name="email" [(ngModel)]="data.email" type="email" id="form2Example1" class="form-control" />
+        </div>
+  
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2">Password</label>
+          <input name="password" [(ngModel)]="data.password" type="password" id="form2Example2" class="form-control" />
+        </div>
+  
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+        <!-- 2 column grid layout for inline styling -->
+  
+        <div class="row mb-4">
+    
+          <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Login Form end -->
