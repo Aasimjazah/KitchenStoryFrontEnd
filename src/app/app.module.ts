@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ChangeDetectorRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,21 +10,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserSignInComponent } from './MyComponent/user-sign-in/user-sign-in.component';
 import { UserSignUpComponent } from './MyComponent/user-sign-up/user-sign-up.component';
 import { FooterComponent } from './MyComponent/footer/footer.component';
+import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     UserSignInComponent,
     UserSignUpComponent,
-    FooterComponent
+    FooterComponent,
+    UserAreaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [UserService],
+  providers: [UserService, NavBarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
- 
-  ngOnInit(): void {
-      
-  }
-
+  flag='signin';
 
   constructor(){}
 
-  
+  sign()
+  {
+    console.log("signin function calling");
+    this.flag = 'logout';
+    console.log(this.flag);
+  }
+
+  ngOnInit(): void {
+  }
+
 }
