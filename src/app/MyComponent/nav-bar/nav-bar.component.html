@@ -30,14 +30,26 @@
         </li>
       </ul>
     </form>
-    <ul style="margin-left: 40%;"class="nav navbar-nav navbar-right">
+    <li>
+      <a class="btn btn-primary">{{this.flag}}</a>
+    </li>
+
+
+    <ul *ngIf="flag=='signin'" style="margin-left: 40%;" class="nav navbar-nav navbar-right">
       <li>
-        <a routerLink="/signIn">signIn</a>
+        <a class="btn btn-primary" routerLink="/signIn">signIn</a>
       </li>
       <li>
-        <a routerLink="/signUp">signUp</a>
+        <a class="btn btn-success" routerLink="/signUp">signUp</a>
       </li>
-      
+
+    </ul>
+
+    <ul *ngIf="flag=='logout'" style="margin-left: 40%;"class="nav navbar-nav navbar-right">
+      <li>
+        <a class="btn btn-success" routerLink="">Sign Out</a>
+      </li>
+
     </ul>
   </div>
 </nav>
