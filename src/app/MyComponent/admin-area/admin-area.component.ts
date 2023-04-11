@@ -19,4 +19,5 @@ export class AdminAreaComponent {
     this.admin = JSON.parse(this.admin);
     console.log(this.admin.email);
   }
+  
 }

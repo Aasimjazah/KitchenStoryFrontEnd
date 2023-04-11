@@ -12,8 +12,12 @@ const routes: Routes = [
   {path:"signUp" , component:UserSignUpComponent},
   {path:"userArea", component: UserAreaComponent},
   {path:"", component:MainComponent},
-  {path:"adminArea",component:AdminAreaComponent},
-  {path:"allUsers",component:AllUsersComponent}
+  {path:"adminArea",component:AdminAreaComponent,
+    children: 
+    [
+     {path:"allUsers",component:AllUsersComponent}
+    ]
+}
 ];
 
 @NgModule({
