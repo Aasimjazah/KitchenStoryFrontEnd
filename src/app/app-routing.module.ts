@@ -4,12 +4,16 @@ import { UserSignInComponent } from './MyComponent/user-sign-in/user-sign-in.com
 import { UserSignUpComponent } from './MyComponent/user-sign-up/user-sign-up.component';
 import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
 import { MainComponent } from './MyComponent/main/main.component';
+import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.component';
+import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 
 const routes: Routes = [
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
   {path:"userArea", component: UserAreaComponent},
-  {path:"", component:MainComponent}
+  {path:"", component:MainComponent},
+  {path:"adminArea",component:AdminAreaComponent},
+  {path:"allUsers",component:AllUsersComponent}
 ];
 
 @NgModule({

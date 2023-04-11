@@ -9,14 +9,22 @@ import { ActivatedRoute } from '@angular/router';
 export class UserAreaComponent implements OnInit
 {
 
-  user:any;
+  user:any={
+   email:"",
+   name:"",
+   dob:"",
+   gender:"",
+   pno:"",
+   password:""
+
+  };
 
   constructor(private route: ActivatedRoute){}
 
   ngOnInit(): void {
     this.user = this.route.snapshot.queryParamMap.get('user');
     this.user = JSON.parse(this.user);
-    console.log(this.user);
+    console.log(this.user.email);
   }
 
 

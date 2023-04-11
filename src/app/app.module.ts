@@ -12,6 +12,8 @@ import { UserSignUpComponent } from './MyComponent/user-sign-up/user-sign-up.com
 import { FooterComponent } from './MyComponent/footer/footer.component';
 import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
 import { MainComponent } from './MyComponent/main/main.component';
+import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.component';
+import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { MainComponent } from './MyComponent/main/main.component';
     UserSignUpComponent,
     FooterComponent,
     UserAreaComponent,
-    MainComponent
+    MainComponent,
+    AdminAreaComponent,
+    AllUsersComponent
   ],
   imports: [
     BrowserModule,

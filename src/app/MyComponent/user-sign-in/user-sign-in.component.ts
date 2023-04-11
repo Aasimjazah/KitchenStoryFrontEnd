@@ -21,21 +21,57 @@ export class UserSignInComponent implements OnInit{
 
   constructor(private user:UserService, private nav:NavBarComponent , private router:Router){}
 
-  userSignIn()
+  getApiUrl(username: string) {
+    const [, domain] = username.split('@');
+    if (domain === 'admin.com') {
+      return 'http://localhost:1111/checkAdmin';
+    } else {
+      return 'http://localhost:1111/checkUser';
+    }
+  }
+  
+  responseData:any={
+    email:"",
+    name:"",
+    dob:"",
+    gender:"",
+    pno:"",
+    password:""
+ 
+   };
+
+  SignIn()
   {
+   
+    const apiUrl = this.getApiUrl(this.data.email);
 
-    console.log(this.data);
-    this.user.userSignIn(this.data).subscribe(
+    this.user.SignIn(this.data,apiUrl).subscribe(
       response=>{
-        console.log(response);
-        this.nav.sign();
-        const user = JSON.stringify(response);
-        this.router.navigate(
-          ['/userArea'],
-          { queryParams: { user: user} }
-        );
+       this.nav.sign();
+       this.responseData=response;
+        console.log(this.responseData.email);
+        const [, domain] = this.responseData.email.split('@');
 
-      },
+    if (domain === 'admin.com') {
+      const user=JSON.stringify(response);
+      this.router.navigate(
+        ['/adminArea'],
+        { queryParams: { user:user} }
+      );
+      
+    } else {
+      const user=JSON.stringify(response);
+      console.log("inside else condition");
+      console.log(user);
+
+      this.router.navigate(
+        ['/userArea'],
+        { queryParams: { user: user} }
+      );
+    }
+     
+  
+  },
       error=>
       {
        console.log(error);
