@@ -56,7 +56,7 @@ export class UserSignInComponent implements OnInit{
       const user=JSON.stringify(response);
       this.router.navigate(
         ['/adminArea'],
-        { queryParams: { user:user} }
+        
       );
       
     } else {

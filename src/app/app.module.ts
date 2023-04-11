@@ -15,6 +15,9 @@ import { MainComponent } from './MyComponent/main/main.component';
 import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.component';
 import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AllProductsComponent } from './MyComponent/all-products/all-products.component';
+import { AddProductComponent } from './MyComponent/add-product/add-product.component';
+import { UserNavbarComponent } from './MyComponent/user-navbar/user-navbar.component';
+import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { AllProductsComponent } from './MyComponent/all-products/all-products.co
     MainComponent,
     AdminAreaComponent,
     AllUsersComponent,
-    AllProductsComponent
+    AllProductsComponent,
+    AddProductComponent,
+    UserNavbarComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
