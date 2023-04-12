@@ -10,8 +10,6 @@ import { AllProductsComponent } from './MyComponent/all-products/all-products.co
 import { NavBarComponent } from './MyComponent/nav-bar/nav-bar.component';
 import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.component';
 const routes: Routes = [
-  {path:"",component:NavBarComponent,outlet:"navbarOutlet"},
-  {path:"admin",component:AdminNavbarComponent,outlet:"navbarOutlet"},
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
   {path:"userArea", component: UserAreaComponent},

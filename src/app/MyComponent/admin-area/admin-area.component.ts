@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Service2Service } from 'src/app/MyServices/service2.service';
 
 @Component({
   selector: 'app-admin-area',
@@ -8,16 +9,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdminAreaComponent {
 
+
+
   admin:any={
     email:"",
     password:""
   }
-  constructor(private route: ActivatedRoute){}
+  constructor(private route: ActivatedRoute, public serve: Service2Service){
+    serve.flag="admin";
+  }
 
   ngOnInit(): void {
+
     this.admin = this.route.snapshot.queryParamMap.get('user');
     this.admin = JSON.parse(this.admin);
     console.log(this.admin.email);
   }
-  
+
 }

@@ -29,7 +29,7 @@ export class UserSignInComponent implements OnInit{
       return 'http://localhost:1111/checkUser';
     }
   }
-  
+
   responseData:any={
     email:"",
     name:"",
@@ -37,12 +37,12 @@ export class UserSignInComponent implements OnInit{
     gender:"",
     pno:"",
     password:""
- 
+
    };
 
   SignIn()
   {
-   
+
     const apiUrl = this.getApiUrl(this.data.email);
 
     this.user.SignIn(this.data,apiUrl).subscribe(
@@ -56,9 +56,9 @@ export class UserSignInComponent implements OnInit{
       const user=JSON.stringify(response);
       this.router.navigate(
         ['/adminArea'],
-        
+        { queryParams: { user: user} }
       );
-      
+
     } else {
       const user=JSON.stringify(response);
       console.log("inside else condition");
@@ -69,8 +69,8 @@ export class UserSignInComponent implements OnInit{
         { queryParams: { user: user} }
       );
     }
-     
-  
+
+
   },
       error=>
       {
