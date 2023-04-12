@@ -32,7 +32,8 @@ import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.co
     AllProductsComponent,
     AddProductComponent,
     UserNavbarComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+
   ],
   imports: [
     BrowserModule,
