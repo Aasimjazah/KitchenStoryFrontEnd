@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Service2Service } from 'src/app/MyServices/service2.service';
 
 
 @Component({
@@ -8,15 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  flag='signin';
 
-  constructor(){}
+  flag: boolean = false;
+  flag2: Service2Service;
+
+
+  constructor(public serve: Service2Service){
+  this.flag2 = serve;
+  }
 
   sign()
   {
-    console.log("signin function calling");
-    this.flag = 'logout';
-    console.log(this.flag);
+    console.log("sign function calling", this.flag);
+    this.flag=false;
+  }
+
+  signout()
+  {
+    console.log("signout function calling", this.flag);
+    this.flag2.flag="main";
   }
 
   ngOnInit(): void {
