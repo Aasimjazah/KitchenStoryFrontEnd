@@ -9,10 +9,9 @@ import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AllProductsComponent } from './MyComponent/all-products/all-products.component';
 import { NavBarComponent } from './MyComponent/nav-bar/nav-bar.component';
 import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.component';
-
 const routes: Routes = [
-  {path:"",component:NavBarComponent,outlet:"navbar"},
-  {path:"adminArea",component:AdminNavbarComponent,outlet:"navbar"},
+  {path:"",component:NavBarComponent,outlet:"navbarOutlet"},
+  {path:"admin",component:AdminNavbarComponent,outlet:"navbarOutlet"},
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
   {path:"userArea", component: UserAreaComponent},
