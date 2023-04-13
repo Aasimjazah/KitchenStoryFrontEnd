@@ -23,7 +23,6 @@ export class AdminAreaComponent {
 
     this.admin = this.route.snapshot.queryParamMap.get('user');
     this.admin = JSON.parse(this.admin);
-    console.log(this.admin.email);
   }
 
 }

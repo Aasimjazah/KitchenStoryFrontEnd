@@ -18,4 +18,9 @@ export class UserService {
   {
     return this.http.post<any>(apiUrl,data)
   }
+
+  getAllUSers()
+  {
+    return this.http.get<any>(`${this.baseUrl}/getAllUsers`);
+  }
 }

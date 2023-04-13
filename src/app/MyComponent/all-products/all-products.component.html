@@ -1,1 +1,32 @@
-<p>all-products works!</p>
+<div class="container">
+    <table class="table table-striped ">
+        <thead class="thead-dark">
+            <tr>
+                <th>S NO.</th>
+                <th>Name</th>
+                <th>kcal</th>
+                <th>category</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>discount</th>
+                <th>imgname</th>
+                <th>status</th>
+
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let row of products;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.kcal }}</td>
+                <td>{{ row.category }}</td>
+                <td>{{ row.price }}</td>
+                <th>{{row.quantity}}</th>
+                <td>{{ row.discount }}</td>
+                <td>{{ row.imgname }}</td>
+                <td>{{ row.status }}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

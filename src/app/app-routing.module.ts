@@ -9,6 +9,7 @@ import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AllProductsComponent } from './MyComponent/all-products/all-products.component';
 import { NavBarComponent } from './MyComponent/nav-bar/nav-bar.component';
 import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.component';
+import { AddProductComponent } from './MyComponent/add-product/add-product.component';
 const routes: Routes = [
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
     children:
     [
      {path:"allUsers",component:AllUsersComponent},
-     {path:"allProducts",component:AllProductsComponent}
+     {path:"allProducts",component:AllProductsComponent},
+     {path:"addProduct",component:AddProductComponent}
   ]
 }
 ];
