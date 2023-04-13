@@ -1,57 +1,77 @@
-<!-- Registration Form start-->
-<div  class="loginDiv">
-    <h2>Login</h2>
-    <hr>
-    <div style="display: inline-block;">
-      <form (ngSubmit)="addUser()">
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example1">Email</label>
-          <input name="email"  [(ngModel)]="data.email" type="email" id="form2Example1" class="form-control" />
+
+
+
+
+
+  <div class="page-wrapper font-poppins" style="margin-top: 2%;">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">User Registration Form</h2>
+                <form (ngSubmit)="addUser()" >
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Name</label>
+                                <input class="input--style-4" id="name" type="text" name="name" type="text" [(ngModel)]="data.name">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Email</label>
+                                <input class="input--style-4" id="email" type="text" name="email"  [(ngModel)]="data.email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Birthday</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" id="dob" type="date" name="dob"  [(ngModel)]="data.dob">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Gender</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">Male
+                                        <input type="radio"  name="gender"  [(ngModel)]="data.gender" value="male">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Female
+                                        <input type="radio"  name="gender"  [(ngModel)]="data.gender" value="female">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Phone Number</label>
+                                <input class="input--style-4" id="pno" type="text" name="pno"  [(ngModel)]="data.pno">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Password</label>
+                                <input class="input--style-4" id="password" type="password" name="password"  [(ngModel)]="data.password">
+                            </div>
+                        </div>
+                    </div>
+
+                   <span style="color:green;" id="msg"></span>
+
+                    <div class="p-t-15">
+                        <button  class="btn btn--radius-2 btn--blue" type="submit"> Submit </button>
+                    </div>
+                </form>
+            </div>
         </div>
-  
-         <!-- Name input -->
-         <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example1">Name</label>
-          <input name="name" type="text" [(ngModel)]="data.name" id="form2Example2" class="form-control" />
-        </div>
-  
-         <!-- DOB input -->
-         <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example1">Date Of Birth</label>
-          <input name="dob"  [(ngModel)]="data.dob" type="text" id="form2Example3" class="form-control" />
-        </div>
-  
-         <!-- Gender input -->
-         <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example1">Gender</label>
-          <input name="gender"  [(ngModel)]="data.gender" type="email" id="form2Example4" class="form-control" />
-        </div>
-  
-         <!-- Phone input -->
-         <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example1">Phone</label>
-          <input name="pno"  [(ngModel)]="data.pno" type="text" id="form2Example5" class="form-control" />
-        </div>
-  
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" for="form2Example2">Password</label>
-          <input name="password"  [(ngModel)]="data.password" type="password" id="form2Example6" class="form-control" />
-        </div>
-  
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-        <!-- 2 column grid layout for inline styling -->
-  
-        <div class="row mb-4">
-    
-          <div class="col">
-            <!-- Simple link -->
-            <a href="#!">Forgot password?</a>
-          </div>
-        </div>
-      </form>
     </div>
-  </div>
-  <!-- Registration Form end -->
+</div>

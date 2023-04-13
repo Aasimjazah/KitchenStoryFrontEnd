@@ -60,13 +60,12 @@ export class UserSignInComponent implements OnInit{
       );
 
     } else {
-      const user=JSON.stringify(response);
-      console.log("inside else condition");
+      const user=response;
+      console.log(response);
       console.log(user);
-
+      sessionStorage.setItem('user', user);
       this.router.navigate(
         ['/userArea'],
-        { queryParams: { user: user} }
       );
     }
 
