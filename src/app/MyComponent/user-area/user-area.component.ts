@@ -25,9 +25,9 @@ export class UserAreaComponent implements OnInit
   }
 
   ngOnInit(): void {
-    this.user = this.route.snapshot.queryParamMap.get('user');
+    this.user = sessionStorage.getItem("user");
     this.user = JSON.parse(this.user);
-    console.log(this.user.email);
+    console.log(this.user);
   }
 
 

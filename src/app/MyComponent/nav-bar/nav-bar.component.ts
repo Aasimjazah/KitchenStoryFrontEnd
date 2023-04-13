@@ -9,7 +9,7 @@ import { Service2Service } from 'src/app/MyServices/service2.service';
 })
 export class NavBarComponent implements OnInit {
 
-
+  user:any;
   flag: boolean = false;
   flag2: Service2Service;
 
@@ -26,11 +26,13 @@ export class NavBarComponent implements OnInit {
 
   signout()
   {
+    sessionStorage.removeItem('user');
     console.log("signout function calling", this.flag);
     this.flag2.flag="main";
   }
 
   ngOnInit(): void {
+    this.user = sessionStorage.getItem("user");
   }
 
 }
