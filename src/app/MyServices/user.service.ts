@@ -23,4 +23,11 @@ export class UserService {
   {
     return this.http.get<any>(`${this.baseUrl}/getAllUsers`);
   }
+
+  getUserbyEmail(email:any)
+  {
+    console.log("getUserByEmail calling");
+    return this.http.get<any>(`${this.baseUrl}/getUser/`+email);
+
+  }
 }

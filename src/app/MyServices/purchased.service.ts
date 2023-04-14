@@ -6,11 +6,16 @@ import { Injectable } from '@angular/core';
 })
 export class PurchasedService {
 
-  private baseUrl:string="http://localhost:1111"
-  constructor(private http:HttpClient) { } 
+  private baseUrl:string="http://localhost:1111";
+  constructor(private http:HttpClient) { }
 
   addPurchased(purchased:any)
   {
      return this.http.post<any>(`${this.baseUrl}/addPurchased`,purchased);
   }
+  getAllPurchased()
+  {
+    return this.http.get<any>(`${this.baseUrl}/getAllPurchased`);
+  }
+
 }

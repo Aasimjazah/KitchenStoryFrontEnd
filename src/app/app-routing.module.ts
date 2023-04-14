@@ -9,6 +9,7 @@ import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AllProductsComponent } from './MyComponent/all-products/all-products.component';
 import { AddProductComponent } from './MyComponent/add-product/add-product.component';
 import { OrderComponent } from './MyComponent/order/order.component';
+import { OrderRequestsComponent } from './MyComponent/order-requests/order-requests.component';
 const routes: Routes = [
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
     [
      {path:"allUsers",component:AllUsersComponent},
      {path:"allProducts",component:AllProductsComponent},
-     {path:"addProduct",component:AddProductComponent}
+     {path:"addProduct",component:AddProductComponent},
+     {path:"orderRequests",component:OrderRequestsComponent}
   ]
 }
 ];

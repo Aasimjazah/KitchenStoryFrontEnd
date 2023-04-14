@@ -18,9 +18,14 @@ export class ProductServiceService {
   {
     return this.http.post(`${this.baseUrl}/addProduct`,data);
   }
-  
+
   addImageUrl(url:any,productId:any)
   {
     return this.http.put(`${this.baseUrl}/uploadImage/`+productId,url);
+  }
+
+  getProductById(id:any)
+  {
+    return this.http.get<any>(`${this.baseUrl}/getProductById/`+id);
   }
 }
