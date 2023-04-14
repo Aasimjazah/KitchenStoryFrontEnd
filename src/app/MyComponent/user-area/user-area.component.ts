@@ -20,8 +20,8 @@ export class UserAreaComponent implements OnInit
 
   };
 
-  constructor(private route: ActivatedRoute, public serve: Service2Service){
-    serve.flag="user";
+  constructor(private route: ActivatedRoute, public service2: Service2Service){
+    
   }
 
   ngOnInit(): void {

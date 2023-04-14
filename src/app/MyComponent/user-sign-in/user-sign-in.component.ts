@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/MyServices/user.service';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { Router } from '@angular/router';
+import { Service2Service } from 'src/app/MyServices/service2.service';
 
 @Component({
   selector: 'app-user-sign-in',
@@ -19,7 +20,7 @@ export class UserSignInComponent implements OnInit {
 
   }
 
-  constructor(private user: UserService, private nav: NavBarComponent, private router: Router) { }
+  constructor(private user: UserService, private nav: NavBarComponent, private router: Router,private service2:Service2Service) { }
 
   getApiUrl(username: string) {
     const [, domain] = username.split('@');
@@ -39,7 +40,7 @@ export class UserSignInComponent implements OnInit {
     password: ""
 
   };
-
+ 
   SignIn() {
 
     const apiUrl = this.getApiUrl(this.data.email);
@@ -51,6 +52,7 @@ export class UserSignInComponent implements OnInit {
         const [, domain] = this.responseData.email.split('@');
 
         if (domain === 'admin.com') {
+          this.service2.saveState("admin");
           const user = JSON.stringify(response);
           this.router.navigate(
             ['/adminArea'],
@@ -58,6 +60,7 @@ export class UserSignInComponent implements OnInit {
           );
         }
         else {
+          this.service2.saveState("user");
           const user = JSON.stringify(response);
           sessionStorage.setItem('user', user);
           this.router.navigate(

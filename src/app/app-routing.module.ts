@@ -7,8 +7,6 @@ import { MainComponent } from './MyComponent/main/main.component';
 import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.component';
 import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AllProductsComponent } from './MyComponent/all-products/all-products.component';
-import { NavBarComponent } from './MyComponent/nav-bar/nav-bar.component';
-import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.component';
 import { AddProductComponent } from './MyComponent/add-product/add-product.component';
 import { OrderComponent } from './MyComponent/order/order.component';
 const routes: Routes = [

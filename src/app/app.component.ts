@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from './MyComponent/footer/footer.component';
-import { NavBarComponent } from './MyComponent/nav-bar/nav-bar.component';
+
 
 @Component({
   selector: 'app-root',
@@ -12,4 +11,6 @@ export class AppComponent
 
   public flag: boolean = true;
   title = 'KitchenStoryFrontEnd';
+
+ 
 }

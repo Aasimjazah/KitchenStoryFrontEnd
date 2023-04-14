@@ -9,14 +9,12 @@ import { Service2Service } from 'src/app/MyServices/service2.service';
 })
 export class AdminAreaComponent {
 
-
-
   admin:any={
     email:"",
     password:""
   }
   constructor(private route: ActivatedRoute, public serve: Service2Service){
-    serve.flag="admin";
+    
   }
 
   ngOnInit(): void {

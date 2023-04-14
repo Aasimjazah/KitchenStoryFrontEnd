@@ -6,7 +6,20 @@ import { Injectable } from '@angular/core';
 export class Service2Service
 {
 
-  flag:String="main";
+   key = 'navFlag';
+constructor()
+{
+  
+}
+ saveState(state: any) {
+  localStorage.setItem(this.key, JSON.stringify(state));
+}
 
-  constructor() { }
+ getState(): any {
+  const state = localStorage.getItem(this.key);
+  console.log(state);
+  return state ;
+}
+
+
 }

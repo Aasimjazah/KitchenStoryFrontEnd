@@ -1,4 +1,4 @@
-<nav *ngIf="flag2.flag=='main'" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav *ngIf="this.service2.getState()!='user' && this.service2.getState()!='admin'" class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a style="margin-left: 5%;" class="navbar-brand" href="#">Kitchen Story</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
 
 
 
-<nav *ngIf="flag2.flag=='admin'" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav *ngIf="this.service2.getState()=='admin'" class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a style="margin-left: 5%;" class="navbar-brand" href="#">Kitchen Story</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
 
     <ul style="margin-left: 70%;" class="nav navbar-nav navbar-right">
       <li>
-        <a class="nav-link" routerLink="/" (click)="signout()">SignOut</a>
+        <a class="nav-link" routerLink="/" (click)="signOut()">SignOut</a>
       </li>
 
 
@@ -88,7 +88,7 @@
 
 
 
-<nav *ngIf="flag2.flag=='user'" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav *ngIf="this.service2.getState()=='user' " class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a style="margin-left: 5%;" class="navbar-brand" href="#">Kitchen Story</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -96,19 +96,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+      <li>
+        <a class="nav-link btn btn-warning text-black">{{user.name}}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
+  </ul>
     <form>
       <ul class="navbar-nav ">
         <li style="margin-left: 5%;width: 100%;">
@@ -119,15 +110,11 @@
         </li>
       </ul>
     </form>
-<ul class="navbar-nav">
-    <li>
-      <a class="nav-link">User Navbar {{flag2.flag}}</a>
-    </li>
-</ul>
+
 
     <ul style="margin-left: 36%;" class="nav navbar-nav navbar-right">
       <li>
-        <a class="nav-link" routerLink="/" (click)="signout()">SignOut</a>
+        <a class="nav-link" routerLink="/" (click)="signOut()">SignOut</a>
       </li>
 
 
