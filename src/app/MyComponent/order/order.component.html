@@ -1,13 +1,13 @@
 
 <div class="container">
     <div *ngIf="this.showWelcomeContent==false" class="row">
-        <div style="background-color:rgb(255, 255, 255); height: 400px;margin-top: 3%; padding-top:30px;padding-left: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
+        <div style="background-color:rgb(255, 255, 255); height: 450px;margin-top: 3%; padding-top:30px;padding-left: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
             <div class="row">
               <div class="col-md-4">
                 <img style="width:300px;height:300px; border-radius: 20px;" src={{product.imgname}} alt="">
               </div>
               <div class="col-md-3">
-                
+
                 <div style="text-align: left;">
                     <h3 class="text-center">Order Details</h3>
                   <hr>
@@ -29,12 +29,19 @@
                     <li><h5>City:- {{user.userAddress.city}}</h5></li>
                     <li><h5>State:- {{user.userAddress.state}}</h5></li>
                     <li><h5>Country:- {{user.userAddress.country}}</h5></li>
-                    
+
                   </ul>
               </div>
             </div>
+            <br>
+
+            <div *ngIf="flag==true" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+            <br>
+
             <div class="row">
-             <button type="button" (click)="placeOrder()" class="text-align:center">place your order</button>
+             <button style="width: 200px; margin-left: 40%;" type="button" (click)="placeOrder()" class="btn btn-primary">place your order</button>
             </div>
           </div>
     </div>

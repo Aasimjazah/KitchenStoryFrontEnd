@@ -8,7 +8,7 @@ import { UserService } from 'src/app/MyServices/user.service';
   styleUrls: ['./user-sign-up.component.css']
 })
 export class UserSignUpComponent implements OnInit {
-
+  flag:boolean = false;
   data={
     email:"",
     name:"",
@@ -29,18 +29,20 @@ export class UserSignUpComponent implements OnInit {
   }
 
 ngOnInit(): void {
-  
+
 }
 
 constructor(private user:UserService){}
 
   addUser()
   {
+    this.flag=true;
     console.log(this.data)
     this.user.addUser(this.data).subscribe(
       response=>
       {
         console.log(response);
+        this.flag=false;
       },
       error=>
       {
