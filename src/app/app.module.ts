@@ -19,6 +19,7 @@ import { AddProductComponent } from './MyComponent/add-product/add-product.compo
 import { UserNavbarComponent } from './MyComponent/user-navbar/user-navbar.component';
 import { AdminNavbarComponent } from './MyComponent/admin-navbar/admin-navbar.component';
 import { OrderComponent } from './MyComponent/order/order.component';
+import { OrderRequestsComponent } from './MyComponent/order-requests/order-requests.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { OrderComponent } from './MyComponent/order/order.component';
     UserNavbarComponent,
     AdminNavbarComponent,
     OrderComponent,
+    OrderRequestsComponent,
 
   ],
   imports: [
