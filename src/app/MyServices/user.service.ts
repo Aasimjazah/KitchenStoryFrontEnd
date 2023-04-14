@@ -11,7 +11,7 @@ export class UserService {
 
   addUser(data:any)
   {
-    return this.http.post(`${this.baseUrl}/addUser`,data);
+    return this.http.post<any>(`${this.baseUrl}/addUser`,data);
   }
 
   SignIn(data:any,apiUrl:any)

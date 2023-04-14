@@ -1,3 +1,47 @@
-<p>order works!</p>
-{{product | json}}
-{{user| json}}
+
+<div class="container">
+    <div *ngIf="this.showWelcomeContent==false" class="row">
+        <div style="background-color:rgb(255, 255, 255); height: 400px;margin-top: 3%; padding-top:30px;padding-left: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
+            <div class="row">
+              <div class="col-md-4">
+                <img style="width:300px;height:300px; border-radius: 20px;" src={{product.imgname}} alt="">
+              </div>
+              <div class="col-md-3">
+                
+                <div style="text-align: left;">
+                    <h3 class="text-center">Order Details</h3>
+                  <hr>
+                  <ul>
+                    <li><h3>{{product.name}}</h3></li>
+                    <li><h4 style="color: green;"> ●{{product.category}} </h4></li>
+                    <li><h4 style="color: red;">❤{{product.kcal}} Kcal</h4></li>
+                    <li><h3><s>{{product.price}} ₹ </s> </h3></li>
+                    <li><h4>-{{product.discount}} % Off</h4></li>
+                  </ul>
+                  </div>
+              </div>
+              <div class="col-md-5">
+                <h3 class="text-center">Address Details</h3>
+                <hr>
+                <ul>
+                    <li><h5>Locality:- {{user.userAddress.address}}</h5></li>
+                    <li><h5>ZipCode:- {{user.userAddress.zipCode}}</h5></li>
+                    <li><h5>City:- {{user.userAddress.city}}</h5></li>
+                    <li><h5>State:- {{user.userAddress.state}}</h5></li>
+                    <li><h5>Country:- {{user.userAddress.country}}</h5></li>
+                    
+                  </ul>
+              </div>
+            </div>
+            <div class="row">
+             <button type="button" (click)="placeOrder()" class="text-align:center">place your order</button>
+            </div>
+          </div>
+    </div>
+
+    <div *ngIf="showWelcomeContent==true" class="row">
+        <h3 class="text-center">Your Order has been placed</h3>
+    </div>
+</div>
+
+

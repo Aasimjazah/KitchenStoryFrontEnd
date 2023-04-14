@@ -15,7 +15,17 @@ export class UserSignUpComponent implements OnInit {
     dob:"",
     gender:"",
     pno:"",
-    password:""
+    password:"",
+    userAddress:
+   {
+       address:"",
+       zipCode:"",
+       city:"",
+       state:"",
+       country:""
+   }
+
+
   }
 
 ngOnInit(): void {
