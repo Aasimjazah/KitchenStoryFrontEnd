@@ -8,6 +8,7 @@ import { UserService } from 'src/app/MyServices/user.service';
   styleUrls: ['./user-sign-up.component.css']
 })
 export class UserSignUpComponent implements OnInit {
+  showmsg:any=false;
   flag:boolean = false;
   data={
     email:"",
@@ -43,6 +44,7 @@ constructor(private user:UserService){}
       {
         console.log(response);
         this.flag=false;
+        this.showmsg = true;
       },
       error=>
       {

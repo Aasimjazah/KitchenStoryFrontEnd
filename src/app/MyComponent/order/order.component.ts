@@ -51,6 +51,7 @@ export class OrderComponent implements OnInit {
         this.flag = false;
          console.log(response);
          this.showWelcomeContent=true;
+
       },
       error=>{
       }
