@@ -88,14 +88,6 @@
 	<section class="main-content">
 		<div class="container">
 			<h3 style="text-align: center;color: rgb(28, 28, 25);">Order you favorite foods</h3>
-			<div *ngIf="user!=null">
-				<p>session established</p>
-			</div>
-
-			<div *ngIf="user==null">
-				<p>session destroyed</p>
-			</div>
-			<br>
 
 			<div class="row">
 				<div *ngFor="let product of products" class="col-sm-6 col-md-6 col-lg-3">
@@ -211,11 +203,11 @@
 								[(ngModel)]="userData.name">
 						</div>
 						<div class="form-outline mb-2">
-							
+
 								<label class="label">Email</label>
 								<input class="form-control form-control-lg"  type="text" name="email"
 									[(ngModel)]="userData.email">
-							
+
 						</div>
 
 
@@ -271,12 +263,12 @@
 					<div class="card-body">
 						<form (ngSubmit)="addUser()">
 							<h2 class="title">Address Details</h2>
-							
+
 								<div class="form-outline mb-4">
 									<input type="text" name="address" [(ngModel)]="userData.userAddress.address"
 										class="form-control form-control-lg" placeholder="Address" id="address" />
 								</div>
-							
+
 
 							<div class="form-outline mb-4">
 								<input type="text" name="zipCode" [(ngModel)]="userData.userAddress.zipCode"
