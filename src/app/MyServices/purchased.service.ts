@@ -18,4 +18,9 @@ export class PurchasedService {
     return this.http.get<any>(`${this.baseUrl}/getAllPurchased`);
   }
 
+  getPurchasedByUser(email:any)
+  {
+    return this.http.get<any>(`${this.baseUrl}/myOrder/`+email);
+  }
+
 }

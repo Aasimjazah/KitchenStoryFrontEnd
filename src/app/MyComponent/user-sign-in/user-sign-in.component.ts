@@ -40,7 +40,7 @@ export class UserSignInComponent implements OnInit {
     password: ""
 
   };
- 
+
   SignIn() {
 
     const apiUrl = this.getApiUrl(this.data.email);
@@ -55,7 +55,7 @@ export class UserSignInComponent implements OnInit {
           this.service2.saveState("admin");
           const user = JSON.stringify(response);
           this.router.navigate(
-            ['/adminArea'],
+            ['/adminArea/allUsers'],
             { queryParams: { user: user } }
           );
         }

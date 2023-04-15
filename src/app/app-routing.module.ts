@@ -10,12 +10,14 @@ import { AllProductsComponent } from './MyComponent/all-products/all-products.co
 import { AddProductComponent } from './MyComponent/add-product/add-product.component';
 import { OrderComponent } from './MyComponent/order/order.component';
 import { OrderRequestsComponent } from './MyComponent/order-requests/order-requests.component';
+import { MyOrdersComponent } from './MyComponent/my-orders/my-orders.component';
 const routes: Routes = [
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
   {path:"userArea", component: UserAreaComponent},
   {path:"", component:MainComponent},
   {path:"order", component:OrderComponent},
+  {path:"myOrders", component:MyOrdersComponent},
   {path:"adminArea",component:AdminAreaComponent,
     children:
     [

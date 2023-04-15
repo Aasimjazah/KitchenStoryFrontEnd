@@ -17,7 +17,7 @@
                 <td>{{i+1}}</td>
                 <td>{{ row.productId}}   <a style="color: blue;font-size: 20px;" (mouseenter)="productDetail(row.productId)" data-toggle="tooltip" title={{productID}}>📄</a></td>
                 <td>{{ row.userEmail}}   <a style="color: blue;font-size: 20px;" (mouseenter)="userDetail(row.userEmail)" data-toggle="tooltip" title={{userEmail}}>📄</a></td>
-                <td>{{ row.status}} 🤔   </td>
+                <td><button>⇜</button>{{ row.status}} 🤔 <button>⇝</button> </td>
             </tr>
         </tbody>
     </table>
