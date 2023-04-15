@@ -107,6 +107,11 @@
                                     class="form-control form-control-lg" placeholder="Country" id="country" />
                             </div>
 
+                            <div *ngIf="flag==true" class="progress">
+                              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                            </div>
+                            <br>
+
                             <div class="p-t-15">
                                 <button type="submit" class="btn btn--radius-2 btn--blue" id="bt">Register</button>
 

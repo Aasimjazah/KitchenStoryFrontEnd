@@ -9,16 +9,17 @@ export class Service2Service
    key = 'navFlag';
 constructor()
 {
-  
+
 }
  saveState(state: any) {
-  localStorage.setItem(this.key, JSON.stringify(state));
+  console.log("Set state calling");
+  localStorage.setItem(this.key,state);
 }
 
  getState(): any {
   const state = localStorage.getItem(this.key);
-  console.log(state);
-  return state ;
+  console.log("get state calling",state);
+  return state ? state : "main";
 }
 
 

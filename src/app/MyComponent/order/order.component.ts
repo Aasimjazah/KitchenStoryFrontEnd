@@ -8,7 +8,7 @@ import { PurchasedService } from 'src/app/MyServices/purchased.service';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-
+  flag:boolean = false;
   product:any;
   user:any;
   purchased:any={
@@ -26,7 +26,7 @@ export class OrderComponent implements OnInit {
     //getting product from session
       let productTemp = sessionStorage.getItem("product") as string;
       this.product=JSON.parse(productTemp);
-      
+
 
 
 
@@ -39,20 +39,22 @@ export class OrderComponent implements OnInit {
       productId: this.product.id,
       userEmail: this.user.email,
     };
-      
+
   }
 
   placeOrder()
   {
-    console.log(this.purchased);  
+    this.flag = true;
+    console.log(this.purchased);
     this.purchase.addPurchased(this.purchased).subscribe(response=>
       {
+        this.flag = false;
          console.log(response);
          this.showWelcomeContent=true;
       },
       error=>{
       }
       );
-    
+
   }
 }
