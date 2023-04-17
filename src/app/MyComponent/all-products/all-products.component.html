@@ -25,6 +25,8 @@
                 <td>{{ row.discount }}</td>
                 <td><a data-toggle="modal" data-target="#uploadModal "><img style="width:30%;height:30%"src={{row.imgname}} /></a></td>
                 <td>{{ row.status }}</td>
+                <td><button class="btn btn-warning">edit</button></td>
+                <td><button class="btn btn-danger">delete</button></td>
                 <input type="file" (change)="onFileSelected($event,row.id)">
             </tr>
         </tbody>
