@@ -1,3 +1,17 @@
+<br>
+<div class="container">
+
+	<form (ngSubmit)="search()" class="d-flex">
+		
+			<input name="search" [(ngModel)]="searchProduct" class="form-control mr-sm-4" type="search"
+				placeholder="Search" aria-label="Search">
+		
+		
+			<button class="btn btn-outline-success my-3 my-sm-0" type="submit">Search</button>
+		
+	</form>
+</div>
+
 <div *ngIf="showSingIn==false" class="container mt-3">
 	<div *ngIf="flag==true" id="mySlideshow" class="carousel slide" data-ride="carousel">
 
@@ -199,14 +213,14 @@
 						<div class="form-outline mb-2">
 
 							<label class="label">Name</label>
-							<input class="form-control form-control-lg"  type="text" name="name" type="text"
+							<input class="form-control form-control-lg" type="text" name="name" type="text"
 								[(ngModel)]="userData.name">
 						</div>
 						<div class="form-outline mb-2">
 
-								<label class="label">Email</label>
-								<input class="form-control form-control-lg"  type="text" name="email"
-									[(ngModel)]="userData.email">
+							<label class="label">Email</label>
+							<input class="form-control form-control-lg" type="text" name="email"
+								[(ngModel)]="userData.email">
 
 						</div>
 
@@ -264,10 +278,10 @@
 						<form (ngSubmit)="addUser()">
 							<h2 class="title">Address Details</h2>
 
-								<div class="form-outline mb-4">
-									<input type="text" name="address" [(ngModel)]="userData.userAddress.address"
-										class="form-control form-control-lg" placeholder="Address" id="address" />
-								</div>
+							<div class="form-outline mb-4">
+								<input type="text" name="address" [(ngModel)]="userData.userAddress.address"
+									class="form-control form-control-lg" placeholder="Address" id="address" />
+							</div>
 
 
 							<div class="form-outline mb-4">

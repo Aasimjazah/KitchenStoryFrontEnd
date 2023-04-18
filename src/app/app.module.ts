@@ -19,6 +19,7 @@ import { AddProductComponent } from './MyComponent/add-product/add-product.compo
 import { OrderComponent } from './MyComponent/order/order.component';
 import { OrderRequestsComponent } from './MyComponent/order-requests/order-requests.component';
 import { MyOrdersComponent } from './MyComponent/my-orders/my-orders.component';
+import { ResetPasswordComponent } from './MyComponent/reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { MyOrdersComponent } from './MyComponent/my-orders/my-orders.component';
     OrderComponent,
     OrderRequestsComponent,
     MyOrdersComponent,
+    ResetPasswordComponent,
 
   ],
   imports: [

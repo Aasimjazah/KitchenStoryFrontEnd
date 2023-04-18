@@ -7,6 +7,8 @@ export class Service2Service
 {
 
    key = 'navFlag';
+   searchResponse:any;
+   searchResponseCon:boolean=false;
 constructor()
 {
 

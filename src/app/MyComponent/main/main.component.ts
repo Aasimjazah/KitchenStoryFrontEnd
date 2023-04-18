@@ -127,4 +127,23 @@ export class MainComponent implements OnInit {
   }
   // signUp method ends here
 
+
+  //search method starts here
+  searchProduct:any;
+  search()
+  {
+    console.log("inside search function");
+    console.log(this.searchProduct);
+    this.productService.getNameOrCategory(this.searchProduct).subscribe(
+      response=>{
+        this.products = response;
+      },
+      error=>
+      {
+
+      }
+    )
+  }
+
+   //search method ends here
 }

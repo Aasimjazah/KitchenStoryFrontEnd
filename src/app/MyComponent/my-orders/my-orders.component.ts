@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductServiceService } from 'src/app/MyServices/product-service.service';
 import { PurchasedService } from 'src/app/MyServices/purchased.service';
+import { Service2Service } from 'src/app/MyServices/service2.service';
 import { UserService } from 'src/app/MyServices/user.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class MyOrdersComponent implements OnInit {
   purchased: any;
   user:any;
   productID: any;
-  constructor(private service: PurchasedService, private userService: UserService, private productService: ProductServiceService ){}
+  constructor(private service: PurchasedService, private userService: UserService, private productService: ProductServiceService){}
 
   ngOnInit(): void {
 

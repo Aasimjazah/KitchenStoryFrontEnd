@@ -54,9 +54,9 @@ export class UserSignInComponent implements OnInit {
         if (domain === 'admin.com') {
           this.service2.saveState("admin");
           const user = JSON.stringify(response);
+          sessionStorage.setItem('admin', user);
           this.router.navigate(
-            ['/adminArea/allUsers'],
-            { queryParams: { user: user } }
+            ['/adminArea'],
           );
         }
         else {

@@ -28,4 +28,9 @@ export class ProductServiceService {
   {
     return this.http.get<any>(`${this.baseUrl}/getProductById/`+id);
   }
+
+  getNameOrCategory(search:any)
+  {
+    return this.http.get<any>(`${this.baseUrl}/getNameOrCategory/`+search);
+  }
 }

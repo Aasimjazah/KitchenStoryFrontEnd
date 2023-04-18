@@ -11,6 +11,7 @@ import { AddProductComponent } from './MyComponent/add-product/add-product.compo
 import { OrderComponent } from './MyComponent/order/order.component';
 import { OrderRequestsComponent } from './MyComponent/order-requests/order-requests.component';
 import { MyOrdersComponent } from './MyComponent/my-orders/my-orders.component';
+import { ResetPasswordComponent } from './MyComponent/reset-password/reset-password.component';
 const routes: Routes = [
   {path:"signIn" , component:UserSignInComponent},
   {path:"signUp" , component:UserSignUpComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
      {path:"allUsers",component:AllUsersComponent},
      {path:"allProducts",component:AllProductsComponent},
      {path:"addProduct",component:AddProductComponent},
-     {path:"orderRequests",component:OrderRequestsComponent}
+     {path:"orderRequests",component:OrderRequestsComponent},
+     {path:"resetPassword",component:ResetPasswordComponent}
   ]
 }
 ];

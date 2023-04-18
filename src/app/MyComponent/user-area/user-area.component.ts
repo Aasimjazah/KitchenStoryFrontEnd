@@ -31,7 +31,6 @@ export class UserAreaComponent implements OnInit
     this.user = sessionStorage.getItem("user");
     this.user = JSON.parse(this.user);
     console.log(this.user);
-
     this.productService.getProducts().subscribe(response => {
       this.products = response;
     },
